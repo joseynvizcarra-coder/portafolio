@@ -129,10 +129,10 @@
   .lms-gallery img:first-child { grid-column: 1/-1; aspect-ratio: 16/7; }
   .lms-gallery img:hover { opacity: 0.85; border-color: var(--accent); }
 
-  .bs-gallery { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; padding: 1rem; }
-  .bs-gallery img { width: 100%; aspect-ratio: 16/9; object-fit: cover; cursor: pointer; transition: opacity 0.2s; }
-  .bs-gallery img:first-child { grid-column: 1/-1; aspect-ratio: 21/9; }
-  .bs-gallery img:hover { opacity: 0.85; }
+  .bs-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 1rem; height: 100%; align-content: start; }
+  .bs-gallery img { width: 100%; aspect-ratio: 16/9; object-fit: cover; cursor: pointer; transition: opacity 0.2s; border: 2px solid transparent; }
+  .bs-gallery img:first-child { grid-column: 1/-1; aspect-ratio: 16/7; }
+  .bs-gallery img:hover { opacity: 0.85; border-color: var(--accent2); }
 
   .moodle-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 1rem; height: 100%; }
   .moodle-gallery img { width: 100%; aspect-ratio: 16/9; object-fit: cover; cursor: pointer; transition: opacity 0.2s; border: 2px solid transparent; }
@@ -420,8 +420,8 @@
         </div>
       </div>
     </div>
-    <div class="project-screens" style="background:#2a4060;">
-      <div class="bs-gallery">
+    <div class="project-screens" style="background:#2a4060;min-height:420px;display:flex;align-items:stretch;">
+      <div class="bs-gallery" style="width:100%;align-self:stretch;">
         <img src="portfolio_brightspace_02.png" alt="Competencias Interculturales" onclick="openLightbox(this.src)">
         <img src="bs_genero_01.png" alt="Estudios de Género" onclick="openLightbox(this.src)">
         <img src="bs_genero_03.png" alt="Módulo Estudios de Género" onclick="openLightbox(this.src)">
